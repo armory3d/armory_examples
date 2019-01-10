@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project version="2">
+	<!-- Output SWF options -->
+	<output>
+		<movie outputType="Application" />
+		<movie input="" />
+		<movie path="krom\krom.js.temp" />
+		<movie fps="30" />
+		<movie width="800" />
+		<movie height="600" />
+		<movie version="16" />
+		<movie minorVersion="0" />
+		<movie platform="JavaScript" />
+		<movie background="#ffffff" />
+		<movie preferredSDK="..\..\..\..\..\..\Downloads\Armory\armsdk\Kha\Tools\haxe" />
+	</output>
+	<!-- Other classes to be compiled into your SWF -->
+	<classpaths>
+		<class path="..\..\..\..\..\..\Downloads\Armory\armsdk\Kha\Sources" />
+		<class path="..\..\..\..\..\..\Downloads\Armory\armsdk\Kha\Backends\Krom" />
+		<class path="..\..\Sources" />
+		<class path="..\..\..\..\..\..\Downloads\Armory\armsdk\armory\Sources" />
+		<class path="..\..\..\..\..\..\Downloads\Armory\armsdk\iron\Sources" />
+		<class path="..\..\..\..\..\..\Downloads\Armory\armsdk\armory" />
+		<class path="..\..\..\..\..\..\Downloads\Armory\armsdk\iron" />
+	</classpaths>
+	<!-- Build options -->
+	<build>
+		<option directives="" />
+		<option flashStrict="False" />
+		<option noInlineOnDebug="False" />
+		<option mainClass="Main" />
+		<option enabledebug="False" />
+		<option additional="-D C:/Users/lubos/Downloads/Armory/armsdk/armory&#xA;-D C:/Users/lubos/Downloads/Armory/armsdk/iron&#xA;-D arm_hosek&#xA;-D arm_deferred&#xA;-D arm_csm&#xA;-D rp_hdr&#xA;-D rp_renderer=Deferred&#xA;-D rp_depthprepass&#xA;-D rp_shadowmap&#xA;-D rp_shadowmap_cascade=1024&#xA;-D rp_shadowmap_cube=512&#xA;-D rp_background=World&#xA;-D rp_render_to_texture&#xA;-D rp_compositornodes&#xA;-D rp_antialiasing=SMAA&#xA;-D rp_supersampling=1&#xA;-D rp_ssgi=SSAO&#xA;-D rp_gi=Off&#xA;-D arm_shaderload&#xA;-D arm_soundcompress&#xA;-D arm_skin&#xA;-D arm_particles_gpu&#xA;-D arm_particles&#xA;-D js-classic&#xA;-D sys_krom&#xA;-D sys_g1&#xA;-D sys_g2&#xA;-D sys_g3&#xA;-D sys_g4&#xA;-D sys_a1&#xA;-D sys_a2&#xA;-D kha_js&#xA;-D kha_krom&#xA;-D kha_krom_js&#xA;-D kha_direct3d11&#xA;-D kha_g1&#xA;-D kha_g2&#xA;-D kha_g3&#xA;-D kha_g4&#xA;-D kha_a1&#xA;-D kha_a2&#xA;-D kha&#xA;-D kha_version=1810&#xA;-D kha_project_name=inst&#xA;-D kha_output=&quot;C:\Users\lubos\Documents\Armory\armory_examples\instancing\build_inst\debug\krom\krom.js.temp&quot;&#xA;armory.trait.WalkNavigation&#xA;--macro keep('armory.trait.WalkNavigation')&#xA;-debug&#xA;" />
+	</build>
+	<!-- haxelib libraries -->
+	<haxelib>
+		<!-- example: <library name="..." /> -->
+	</haxelib>
+	<!-- Class files to compile (other referenced classes will automatically be included) -->
+	<compileTargets>
+		<compile path="..\Sources\Main.hx" />
+	</compileTargets>
+	<!-- Paths to exclude from the Project Explorer tree -->
+	<hiddenPaths>
+		<!-- example: <hidden path="..." /> -->
+	</hiddenPaths>
+	<!-- Executed before build -->
+	<preBuildCommand />
+	<!-- Executed after build -->
+	<postBuildCommand alwaysRun="False" />
+	<!-- Other project options -->
+	<options>
+		<option showHiddenPaths="False" />
+		<option testMovie="Custom" />
+		<option testMovieCommand="run_krom.bat" />
+	</options>
+	<!-- Plugin storage -->
+	<storage />
+</project>
