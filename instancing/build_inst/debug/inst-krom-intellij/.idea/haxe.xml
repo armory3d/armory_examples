@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="HaxeProjectSettings" defines="C:/Users/lubos/Downloads/Armory/armsdk/armory,C:/Users/lubos/Downloads/Armory/armsdk/iron,arm_hosek,arm_deferred,arm_csm,rp_hdr,rp_renderer=Deferred,rp_depthprepass,rp_shadowmap,rp_shadowmap_cascade=1024,rp_shadowmap_cube=512,rp_background=World,rp_render_to_texture,rp_compositornodes,rp_antialiasing=SMAA,rp_supersampling=1,rp_ssgi=SSAO,rp_gi=Off,arm_shaderload,arm_soundcompress,arm_skin,arm_particles_gpu,arm_particles,js-classic,sys_krom,sys_g1,sys_g2,sys_g3,sys_g4,sys_a1,sys_a2,kha_js,kha_krom,kha_krom_js,kha_direct3d11,kha_g1,kha_g2,kha_g3,kha_g4,kha_a1,kha_a2,kha,kha_version=1810,kha_project_name=instarmory.trait.WalkNavigation,--macro keep('armory.trait.WalkNavigation'),-debug," />
-</project>
