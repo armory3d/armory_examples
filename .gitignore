@@ -1,0 +1,5 @@
+*/build*
+*/*.blend?
+*/Sources/Main.hx
+*/Sources/arm/node/*
+*/khafile.js
