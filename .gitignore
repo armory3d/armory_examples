@@ -3,3 +3,5 @@
 */Sources/Main.hx
 */Sources/arm/node/*
 */khafile.js
+*.pyc
+*.DS_Store
