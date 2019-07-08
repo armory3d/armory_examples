@@ -9,13 +9,7 @@ class FindObjects extends iron.Trait {
 
 		 notifyOnInit(init);
 
-		 notifyOnUpdate(function() {
-			 var array = [];
-			 var sceneParent = Scene.active.sceneParent;
-			 var objsNotVisibleToCam = objsNotVisibleToCamera(sceneParent,array);
-			 trace(array.length);
-			 trace("objects not visible to camera: " + objsNotVisibleToCam.length);
-		 });
+		 notifyOnUpdate(update);
 	}
 
 	function init(){
@@ -36,6 +30,14 @@ class FindObjects extends iron.Trait {
 
 		for(obj in sceneObjs) if(!obj.visible) array.push(obj);
 		trace("invisible objects: " + array.length);
+	}
+	
+	function update(){
+		var array = [];
+		var sceneParent = Scene.active.sceneParent;
+		var objsNotVisibleToCam = objsNotVisibleToCamera(sceneParent,array);
+		trace(array.length);
+		trace("objects not visible to camera: " + objsNotVisibleToCam.length);
 	}
 
 	function objsNotVisible(obj:Object, group:Array<Object>, ignoreRoot=true):Array<Object>{
