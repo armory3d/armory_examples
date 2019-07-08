@@ -36,7 +36,6 @@ class FindObjects extends iron.Trait {
 		var array = [];
 		var sceneParent = Scene.active.sceneParent;
 		var objsNotVisibleToCam = objsNotVisibleToCamera(sceneParent,array);
-		trace(array.length);
 		trace("objects not visible to camera: " + objsNotVisibleToCam.length);
 	}
 
