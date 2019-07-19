@@ -28,11 +28,13 @@ class SplitScreen extends iron.Trait {
 				var g = RenderPathCreator.path.currentG;
 
 				// Left viewport
+				RenderPathCreator.setTargetMeshes();
 				Scene.active.camera = cam1;
 				g.viewport(0, 0, w, h);
 				drawMeshes();
 
 				// Right viewport
+				RenderPathCreator.setTargetMeshes();
 				Scene.active.camera = cam2;
 				g.viewport(w, 0, w, h);
 				drawMeshes();
