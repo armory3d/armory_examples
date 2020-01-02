@@ -7,9 +7,6 @@ import iron.data.MeshData;
 import iron.data.MaterialData;
 import iron.system.Input;
 
-// Format library should be enabled in `Armory Project - Modules - Format`
-import iron.format.obj.ObjParser;
-
 class ImportMesh extends iron.Trait {
 
 	var meshData:MeshData;
@@ -23,13 +20,13 @@ class ImportMesh extends iron.Trait {
 
 			// Parse obj file
 			var mesh = new ObjParser(blob);
-		
+
 			// Positions, normals and indices
 			var pos:TVertexArray = { attrib: "pos", values: mesh.posa };
 			var nor:TVertexArray = { attrib: "nor", values: mesh.nora };
 			var ind:TIndexArray = { material: 0, values: mesh.inda };
 
-			var rawmeshData:TMeshData = { 
+			var rawmeshData:TMeshData = {
 				name: "BoxMesh",
 				vertex_arrays: [pos, nor],
 				index_arrays: [ind],
@@ -41,7 +38,7 @@ class ImportMesh extends iron.Trait {
 			new MeshData(rawmeshData, function(data:MeshData) {
 				meshData = data;
 				meshData.geom.calculateAABB();
-				
+
 				// Fetch material from scene data
 				Data.getMaterial("Scene", "Material", function(data:MaterialData) {
 					// Material loaded
@@ -58,7 +55,7 @@ class ImportMesh extends iron.Trait {
 		if (mouse.started()) {
 			// Create new object in active scene
 			var object = Scene.active.addMeshObject(meshData, materials);
-			
+
 			// Just for testing, add rigid body trait
 			var aabb = meshData.geom.aabb;
 			object.transform.loc.set(Math.random() * 8 - 4, Math.random() * 8 - 4, 5);

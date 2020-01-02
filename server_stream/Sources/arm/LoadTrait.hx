@@ -5,7 +5,6 @@ import iron.object.MeshObject;
 import iron.data.MeshData;
 import iron.data.SceneFormat;
 import iron.Scene;
-import iron.format.obj.ObjParser;
 
 class LoadTrait extends iron.Trait {
 
