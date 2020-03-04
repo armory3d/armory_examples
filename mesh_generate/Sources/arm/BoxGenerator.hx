@@ -48,15 +48,15 @@ class BoxGenerator extends iron.Trait {
 		var posI16 = new Int16Array(numVertices * 4); // pos.xyz, nor.z
 		var norI16 = new Int16Array(numVertices * 2); // nor.xy
 		toI16(posI16, norI16, positions, normals);
-		
+
 		var indU32 = new Uint32Array(indices.length);
 		toU32(indU32, indices);
 
-		var pos:TVertexArray = { attrib: "pos", values: posI16 };
-		var nor:TVertexArray = { attrib: "nor", values: norI16 };
+		var pos:TVertexArray = { attrib: "pos", values: posI16, data: "short4norm" };
+		var nor:TVertexArray = { attrib: "nor", values: norI16, data: "short2norm" };
 		var ind:TIndexArray = { material: 0, values: indU32 };
 
-		var rawmeshData:TMeshData = { 
+		var rawmeshData:TMeshData = {
 			name: "BoxMesh",
 			vertex_arrays: [pos, nor],
 			index_arrays: [ind],
@@ -68,7 +68,7 @@ class BoxGenerator extends iron.Trait {
 			// Mesh data parsed
 			meshData = data;
 			meshData.geom.calculateAABB();
-			
+
 			// Fetch material from scene data
 			Data.getMaterial("Scene", "Material", function(data:MaterialData) {
 				// Material loaded
@@ -84,7 +84,7 @@ class BoxGenerator extends iron.Trait {
 		if (mouse.started()) {
 			// Create new object in active scene
 			var object = Scene.active.addMeshObject(meshData, materials);
-			
+
 			// Just for testing, add rigid body trait
 			var aabb = meshData.geom.aabb;
 			object.transform.loc.set(Math.random() * 8 - 4, Math.random() * 8 - 4, 5);

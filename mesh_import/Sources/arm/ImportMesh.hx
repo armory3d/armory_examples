@@ -22,8 +22,8 @@ class ImportMesh extends iron.Trait {
 			var mesh = new ObjParser(blob);
 
 			// Positions, normals and indices
-			var pos:TVertexArray = { attrib: "pos", values: mesh.posa };
-			var nor:TVertexArray = { attrib: "nor", values: mesh.nora };
+			var pos:TVertexArray = { attrib: "pos", values: mesh.posa, data: "short4norm" };
+			var nor:TVertexArray = { attrib: "nor", values: mesh.nora, data: "short2norm" };
 			var ind:TIndexArray = { material: 0, values: mesh.inda };
 
 			var rawmeshData:TMeshData = {

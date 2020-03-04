@@ -11,9 +11,9 @@ class MyTrait extends iron.Trait {
 
 			// Access final composited image that is afterwards drawn to the screen
 			var image = RenderPathCreator.finalTarget.image;
-			
+
 			g.color = 0xffffffff;
-			if (image.g4.renderTargetsInvertedY()) {
+			if (kha.Image.renderTargetsInvertedY()) {
 				g.drawScaledImage(image, 0, image.height / 5, image.width / 5, -image.height / 5);
 			}
 			else {
