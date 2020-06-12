@@ -38,12 +38,11 @@ class LoadTrait extends iron.Trait {
 	function makeMesh(data:String) {
 		// Parse received .obj data
 		var mesh = new ObjParser(kha.Blob.fromBytes(Bytes.ofString(data)));
+		var posaAr: TVertexArray = { attrib: "pos", values: mesh.posa, data: "short4norm"};
+		var noraAr: TVertexArray = { attrib: "nor", values: mesh.nora, data: "short2norm"};
 		var raw:TMeshData = {
 			name: "Mesh",
-			vertex_arrays: [
-				{ values: mesh.posa, attrib: "pos" },
-				{ values: mesh.nora, attrib: "nor" }
-			],
+			vertex_arrays: [posaAr, noraAr],
 			index_arrays: [
 				{ values: mesh.inda, material: 0 }
 			],
