@@ -60,16 +60,16 @@ class UITrait extends iron.Trait {
     }
 
     function update() {
-
-        // We need to figure out if user clicked on the UI plane
         // Get plane UV
         var mouse = Input.getMouse();
-        var uv = iron.math.RayCaster.getPlaneUV(cast object, mouse.x, mouse.y, iron.Scene.active.camera);
+        var uv = iron.math.RayCaster.boxIntersect(cast object.transform, mouse.x, mouse.y, iron.Scene.active.camera);
         if (uv == null) return;
 
         // Pixel coords
-        var px = Std.int(uv.x * uiWidth);
-        var py = Std.int(uv.y * uiHeight);
+        var d1 = object.transform.dim;
+        var px = Std.int(((uv.x-(-d1.x/2)) / ((d1.x/2)-(-d1.x/2)) - object.transform.worldx()) * uiWidth);
+        var py = Std.int(((uv.z-(d1.z/2)) / ((d1.z/2)-(-d1.z/2)) - object.transform.worldz()) * -uiHeight) ;
+        
 
         // Send input events
         if (mouse.started()) ui.onMouseDown(0, px, py);
