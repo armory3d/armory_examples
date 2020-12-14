@@ -1,5 +1,6 @@
 {
     "rp_bloom": true,
+    "rp_dynres": false,
     "rp_gi": false,
     "rp_motionblur": true,
     "rp_shadowmap_cascade": 1024,
