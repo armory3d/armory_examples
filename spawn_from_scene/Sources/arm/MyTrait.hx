@@ -13,7 +13,7 @@ class MyTrait extends iron.Trait {
 
 	function init() {
 		Data.getSceneRaw("Scene.001", function (raw:TSceneFormat) {
-			var obj = Scene.getObj(raw, "Suzanne");
+			var obj = Scene.getRawObjectByName(raw, "Suzanne");
 			Scene.active.createObject(obj, raw, null, null, function(o:Object) {
 				trace("Suzanne spawned!");
 			});
