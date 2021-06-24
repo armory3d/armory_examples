@@ -5,3 +5,5 @@
 */khafile.js
 *.pyc
 *.DS_Store
+_*/
+*/*.txt
