@@ -29,7 +29,7 @@ class MoveBoneFK extends iron.Trait {
 				m.setFrom(w);
 				m.translate(10, 0, Math.sin(iron.system.Time.time()) * 50);
 				iw.getInverse(w);
-				m.multmat2(iw);
+				m.multmat(iw);
 			});
 		});
 	}

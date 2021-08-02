@@ -52,7 +52,7 @@ class ImportMesh extends iron.Trait {
 	function update() {
 		// Left mouse button was pressed / display touched
 		var mouse = Input.getMouse();
-		if (mouse.started()) {
+		if (mouse.down()) {
 			// Create new object in active scene
 			var object = Scene.active.addMeshObject(meshData, materials);
 

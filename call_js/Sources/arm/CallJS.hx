@@ -10,10 +10,10 @@ class CallJS extends iron.Trait {
 
 	public function new() {
 		super();
-
+        var mouse = Input.getMouse();
         notifyOnUpdate(function() {
+
             // Check mouse button
-            var mouse = Input.getMouse();
             if (!mouse.started()) return;
 
             // Pick object at mouse coords
@@ -21,10 +21,9 @@ class CallJS extends iron.Trait {
             
             // Check if picked object is our Cube
             if (rb != null && rb.object.name == 'Cube') {
-
                 // Raw JS calls
-                untyped __js__('document.title = "Cube clicked!"');
-                untyped __js__('console.log("Testing..");');
+                js.Syntax.code('document.title = "Cube clicked!"');
+                js.Syntax.code('console.log("Testing..");');
             }
         });
 	}

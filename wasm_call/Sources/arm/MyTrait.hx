@@ -12,9 +12,9 @@ class MyTrait extends iron.Trait {
 
 	function init() {
 		// Load wasm blob
-		Data.getBlob("main.wasm", function(b:kha.Blob) {
+		Data.getBlob("main.wasm", blob -> {
 			// Create wasm module
-			var wasm = Wasm.instance(b);
+			var wasm = Wasm.instance(blob);
 			var rot = 0.0;
 			notifyOnUpdate(function() {
 				// Call function from wasm module
