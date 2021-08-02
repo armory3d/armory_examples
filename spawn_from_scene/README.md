@@ -1,0 +1,1 @@
+Spawns an object from another scene.
