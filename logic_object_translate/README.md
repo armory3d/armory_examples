@@ -1,1 +1,1 @@
-Press keyboard WASD to translate object
+Keyboard `WASD` to translate object

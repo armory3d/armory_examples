@@ -3,6 +3,9 @@
         {
             "contexts": [
                 {
+                    "color_attachments": [
+                        "RGBA64"
+                    ],
                     "compare_mode": "less",
                     "constants": [
                         {
@@ -33,10 +36,9 @@
                     ],
                     "cull_mode": "clockwise",
                     "depth_write": true,
-                    "fragment_shader": "MyMaterial.frag",
+                    "fragment_shader": "MyCustomMaterial.frag",
                     "name": "mesh",
                     "texture_units": [],
-                    "vertex_shader": "MyMaterial.vert",
                     "vertex_elements": [
                         {
                             "name": "pos",
@@ -46,10 +48,11 @@
                             "name": "nor",
                             "data": "short2norm"
                         }
-                    ]
+                    ],
+                    "vertex_shader": "MyCustomMaterial.vert"
                 }
             ],
-            "name": "MyMaterial.json"
+            "name": "MyCustomMaterial"
         }
     ]
 }
