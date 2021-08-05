@@ -1,8 +1,8 @@
 package arm;
 
-import iron.Scene;
-import iron.data.Data;
 import armory.trait.internal.CanvasScript;
+import iron.data.Data;
+import iron.Scene;
 
 class ReadFile extends iron.Trait {
 	public function new() {
@@ -11,7 +11,7 @@ class ReadFile extends iron.Trait {
 		notifyOnInit(function() {
 
 			// Relative or absolute path to file
-			// In this case we load the file placed in the "Bundled/" folder
+			// In this case we load the file placed in the "Bundled/" directory
 			var file = "my_file.json";
 
 			// Load the file asynchronously

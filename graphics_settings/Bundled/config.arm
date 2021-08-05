@@ -8,7 +8,7 @@
     "rp_ssgi": true,
     "rp_ssr": true,
     "rp_supersample": 1.0,
-    "window_h": 720,
+    "window_h": 540,
     "window_maximizable": false,
     "window_minimizable": true,
     "window_mode": 0,
@@ -16,5 +16,5 @@
     "window_resizable": false,
     "window_scale": 1.0,
     "window_vsync": true,
-    "window_w": 1280
+    "window_w": 960
 }

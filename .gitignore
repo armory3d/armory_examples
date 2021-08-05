@@ -2,6 +2,12 @@
 */*.blend?
 */Sources/Main.hx
 */Sources/arm/node/*
-*/khafile.js
 *.pyc
 *.DS_Store
+khafile.js
+node_update_failure.*
+_themes.json
+.vscode/
+config.arm
+_themes.json
+_*/
