@@ -3,6 +3,7 @@ package arm;
 import iron.math.Vec4;
 import iron.object.Object;
 import iron.object.Uniforms;
+import iron.data.Data;
 import iron.data.MaterialData;
 import iron.system.Time;
 
@@ -13,23 +14,17 @@ class MyTrait extends iron.Trait {
 
 	public function new() {
 		super();
-
-		notifyOnInit(function() {
+		notifyOnInit(() -> {
 			// Register link callbacks
 			Uniforms.externalVec3Links.push(vec3Link);
 			Uniforms.externalFloatLinks.push(floatLink);
 			Uniforms.externalTextureLinks.push(textureLink);
 		});
-
-		iron.data.Data.getImage("tex1.png", function(image:kha.Image) {
-			tex1 = image;
-		});
-		iron.data.Data.getImage("tex2.png", function(image:kha.Image) {
-			tex2 = image;
-		});
+		Data.getImage("tex1.png", img -> tex1 = img );
+		Data.getImage("tex2.png", img -> tex2 = img );
 	}
 
-	function vec3Link(object:Object, mat:MaterialData, link:String):iron.math.Vec4 {
+	function vec3Link(object:Object, mat:MaterialData, link:String):Vec4 {
 		// object - currently bound object
 		// mat - currently bound material
 		// link - material node name
@@ -43,7 +38,7 @@ class MyTrait extends iron.Trait {
 	function floatLink(object:Object, mat:MaterialData, link:String):Null<kha.FastFloat> {
 		if (link == "Value") {
 			var t = Time.time();
-			return Math.sin(t) * 0.5 + 0.5;
+			return Math.floor(t);
 		}
 		return null;
 	}
