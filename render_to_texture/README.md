@@ -1,1 +1,2 @@
-Press keyboard r, t, f, g, v, b to rotate suzanne
+#### Keyboard
+`R T F G V B` to rotate suzanne

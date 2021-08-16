@@ -9,9 +9,10 @@ class RayCastTrait extends iron.Trait {
     public function new() {
         super();
         
+        var mouse = iron.system.Input.getMouse();
+        var keyboard = iron.system.Input.getKeyboard();
+
         notifyOnUpdate(function() {
-            var mouse = iron.system.Input.getMouse();
-            var keyboard = iron.system.Input.getKeyboard();
 
             if (mouse.down()) {
                 var physics = PhysicsWorld.active;
@@ -30,9 +31,9 @@ class RayCastTrait extends iron.Trait {
                 
                 var hit = physics.rayCast(from, to);
                 var rb = (hit != null) ? hit.rb : null;
-                if (rb != null) {
-                    trace(rb.object.name);
-                }
+                var info = '';
+                if( rb != null ) info += ' ${rb.object.name}';
+                trace(info);
             }
 
             if (keyboard.down("left")) {
