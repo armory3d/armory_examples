@@ -8,35 +8,26 @@ import armory.trait.internal.DebugDraw;
 class TweenTest extends iron.Trait {
 
     @prop var ease : Int = 0;
-    
+
     public function new() {
-
         super();
-
-        #if arm_debug
-		//DebugDraw.notifyOnRender( draw -> draw.bounds( object.transform) );
-		#end
-
-        notifyOnInit(tweenUp);
+        notifyOnInit(() -> {
+            #if arm_debug
+            //DebugDraw.notifyOnRender( draw -> draw.bounds( object.transform) );
+            #end
+            doTween(10);
+        });
     }
 
-    function tweenUp() {
-        doTween( 15, tweenDown );
-    }
-    
-    function tweenDown() {
-        doTween( -15, tweenUp );
-    }
-  
-    function doTween( z : Float, onDone : Void->Void ) {
+    function doTween( v : Float ) {
         Tween.to({
             target: object.transform.loc,
-            props: { z: z },
-            duration: 2.0,
+            props: { z: v },
             delay: 0.5,
-            tick: object.transform.buildMatrix,
+            duration: 2.0,
             ease: ease,
-            done: onDone
+            tick: object.transform.buildMatrix,
+            done: () -> doTween(-v)
         });
     }
 }
