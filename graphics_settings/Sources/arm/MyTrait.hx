@@ -28,8 +28,8 @@ class MyTrait extends iron.Trait {
 				canvas.getHandle("MotionBlur").selected = Config.raw.rp_motionblur;
 				canvas.getHandle("Shadows").position = getShadowQuality(Config.raw.rp_shadowmap_cascade);
 				var cam = Scene.active.camera;
-				canvas.getHandle("ViewDistance").value = Std.int(cam.data.raw.far_plane * 100) / 10000;
-				canvas.getHandle("FoV").value = Std.int(cam.data.raw.fov * 100) / 100;
+				canvas.getHandle("ViewDistance").text = Std.string(Math.round(cam.data.raw.far_plane));
+				canvas.getHandle("FoV").value = cam.data.raw.fov;
 			});
 			
 			// Apply button clicked
@@ -51,7 +51,7 @@ class MyTrait extends iron.Trait {
 
 		// Apply camera settings
 		var cam = Scene.active.camera;
-		cam.data.raw.far_plane = canvas.getHandle("ViewDistance").value * 100;
+		cam.data.raw.far_plane = Std.parseFloat(canvas.getHandle("ViewDistance").text);
 		cam.data.raw.fov = canvas.getHandle("FoV").value;
 		cam.buildProjection();
 
