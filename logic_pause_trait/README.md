@@ -1,3 +1,3 @@
 #### Keyboard
-- `1` to pause trait
-- `2` to resume trait
+- `1` pause trait
+- `2` resume trait
