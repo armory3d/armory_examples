@@ -1,1 +1,5 @@
-https://github.com/armory3d/armory/wiki/navmesh
+- https://github.com/armory3d/armory/wiki/navmesh
+---
+- [NavMesh](https://api.armory3d.org/armory/trait/NavMesh.html)
+- [NavAgent](https://api.armory3d.org/armory/trait/NavAgent.html)
+- [NavCrowd](https://api.armory3d.org/armory/trait/NavCrowd.html)
