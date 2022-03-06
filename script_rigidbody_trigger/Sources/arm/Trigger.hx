@@ -24,15 +24,17 @@ class Trigger extends iron.Trait {
 			// TODO: replace with notifyOnCollisionEnter or notifyOnTriggerEnter once implemented
 			// ref: https://github.com/armory3d/armory/issues/331
 			var rbs = physics.getContacts(object.getTrait(RigidBody));
+			var visible = false;
+
 			if (rbs != null) {
 				for (rb in rbs){
 					if(rb.object.name == "Cube"){
-						obj.visible = true;
+						visible = true;
 					}
 				}
-			} else {
-				obj.visible = false;
 			}
+
+			obj.visible = visible;
 		});
 	}
 }
