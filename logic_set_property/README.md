@@ -1,1 +1,1 @@
-- Press 1, 2 or 3
+- Press `1`, `2` or `3`

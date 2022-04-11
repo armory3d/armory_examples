@@ -1,1 +1,1 @@
-https://armory3d.org/api/kha/Storage.html
+https://api.armory3d.org/kha/Storage.html
