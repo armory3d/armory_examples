@@ -1,1 +1,1 @@
-https://armory3d.org/api/armory/trait/PhysicsDrag.html
+https://api.armory3d.org/armory/trait/PhysicsDrag.html

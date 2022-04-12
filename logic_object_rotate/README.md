@@ -1,1 +1,1 @@
-Press keyboard A, D to rotate object
+Press keyboard `A`, `D` to rotate object
