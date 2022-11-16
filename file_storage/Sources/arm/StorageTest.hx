@@ -13,9 +13,9 @@ class StorageTest extends iron.Trait {
 			if (data == null) return;
 
 			// First run - init integer variable named 'count'
-			var count:Dynamic = data.count;
+			var count:Dynamic = data.mycount;
 			if (count == null) {
-				data.count = 0;
+				data.mycount = 0;
 				// Init more variables as needed
 				// data.test1 = "String";
 				// data.test2 = 1.23;
@@ -24,12 +24,11 @@ class StorageTest extends iron.Trait {
 				// data.test5 = {a: 3, b: "value"};
 			}
 
-			trace("Count is " + data.count);
+			trace("Count is " + data.mycount);
 			
 			// Increase count on every run
-			data.count++;
+			data.mycount++;
 
-			// Write changes
 			Storage.save();
 		});
 	}
