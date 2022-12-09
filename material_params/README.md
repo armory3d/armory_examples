@@ -1,4 +1,5 @@
 Shows how to control material nodes at run-time.
+Press 1, 2, 3 to change parameters.
 
 - Enable `Parameter` property in `Logic Node Editor - Properties - Armory Material Node`
 - RGB, Value and Image Texture nodes are supported
