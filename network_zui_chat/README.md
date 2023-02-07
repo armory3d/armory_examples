@@ -11,9 +11,11 @@ Simple Network Zui Chat Example:
 
 ** System server *targets (like hashlink C for desktop/mobile) are intended to basically turn your desktop/mobile device into a server to which you can connect to with either another client instance on desktop/mobile or with a browser instance only as a client. 
 
-```C targets = host / client
+```
+C targets = host / client
 Browser = only client
-Krom = N/A (for now)```  
+Krom = N/A (for now)
+```  
 
 Introduction to Networking in Armory 3D | Overview of all nodes 
 https://www.youtube.com/watch?t=135&v=ZmaG_JFmn0Q&feature=youtu.be
