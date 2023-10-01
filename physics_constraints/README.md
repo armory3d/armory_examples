@@ -1,0 +1,2 @@
+- https://github.com/armory3d/armory/wiki/physics#rigid-body-constraints
+- https://api.armory3d.org/armory/trait/physics/PhysicsConstraint.html

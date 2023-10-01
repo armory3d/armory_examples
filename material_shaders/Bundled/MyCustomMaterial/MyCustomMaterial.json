@@ -1,0 +1,58 @@
+{
+    "shader_datas": [
+        {
+            "contexts": [
+                {
+                    "color_attachments": [
+                        "RGBA64"
+                    ],
+                    "compare_mode": "less",
+                    "constants": [
+                        {
+                            "link": "_worldViewProjectionMatrix",
+                            "name": "WVP",
+                            "type": "mat4"
+                        },
+                        {
+                            "link": "_normalMatrix",
+                            "name": "N",
+                            "type": "mat3"
+                        },
+                        {
+                            "link": "_posUnpack",
+                            "name": "posUnpack",
+                            "type": "float"
+                        },
+                        {
+                            "link": "_time",
+                            "name": "time",
+                            "type": "float"
+                        },
+                        {
+                            "link": "myParam",
+                            "name": "myParam",
+                            "type": "float"
+                        }
+                    ],
+                    "cull_mode": "clockwise",
+                    "depth_write": true,
+                    "fragment_shader": "MyCustomMaterial.frag",
+                    "name": "mesh",
+                    "texture_units": [],
+                    "vertex_elements": [
+                        {
+                            "name": "pos",
+                            "data": "short4norm"
+                        },
+                        {
+                            "name": "nor",
+                            "data": "short2norm"
+                        }
+                    ],
+                    "vertex_shader": "MyCustomMaterial.vert"
+                }
+            ],
+            "name": "MyCustomMaterial"
+        }
+    ]
+}
