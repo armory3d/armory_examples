@@ -1,1 +1,0 @@
-Click to spawn pin

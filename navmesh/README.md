@@ -1,5 +1,0 @@
-- https://github.com/armory3d/armory/wiki/navmesh
----
-- https://api.armory3d.org/armory/trait/NavMesh.html
-- https://api.armory3d.org/armory/trait/NavAgent.html
-- https://api.armory3d.org/armory/trait/NavCrowd.html
